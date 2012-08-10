@@ -55,6 +55,7 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext
+  bundler (= 1.2.0.pre.1)
   em-mongo
   goliath
   grape
