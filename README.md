@@ -1,8 +1,10 @@
-GGM ( a GitWatcher lab experiment )
+GGM ( Goliath - Grape - MongoDB, on Heroku )
 ===
 
-GitWatcher lab experimenting with Goliath reactor, Grape APIs, [gitwatcher.com](http://gitwatcher.com) data on MongoDB and Heroku PAAS.
-Here it is the [Heroku](http://ggm.herokuapp.com/v1/categories) working example used during the tests: [http://ggm.herokuapp.com/v1/categories](http://ggm.herokuapp.com/v1/categories)	 
+This is a GitWatcher lab, experimenting with Goliath asyncronous ruby web server framework, Grape APIs, [gitwatcher.com](http://gitwatcher.com) data on MongoLAB/MongoDB and Heroku PAAS.
+Here they are, the Heroku working examples used during the tests: 
+-    [http://ggm.herokuapp.com/v1/categories](http://ggm.herokuapp.com/v1/categories)	 
+-    [http://gitwatcher.com/categories.json](http://gitwatcher.com/categories.json)
 
 ApacheBench (ab): 
 ===
@@ -10,8 +12,8 @@ ApacheBench (ab):
 >[ab](http://en.wikipedia.org/wiki/ApacheBench) is a single-threaded command line computer program for measuring the performance of HTTP web servers. Originally designed to test the Apache HTTP Server, it is actually generic enough to test any web server.
 
 What is following is a comparison between [Rails 3](https://github.com/rails/rails) and [Goliath 1](https://github.com/postrank-labs/goliath) JSON API consuming
-==
-The following ApacheBench, has been run on Heroku Cedar single Web Dynos, on Ruby 1.9.3p194, MongoLab/mongodb. Goliath 1 responds to 100 cuncurrent calls in 1.826 seconds, with a medium of 54.76 requests per second:
+---
+The following ApacheBench, has been run on Heroku Cedar single Web Dynos, on Ruby 1.9.3p194, MongoLAB/MongoDB. Goliath 1 responds to 100 cuncurrent calls in 1.826 seconds, with a medium of 54.76 requests per second:
 
 <pre>
     lsoave@ubuntu:~$ ab -n 100 -c 100 http://ggm.herokuapp.com/v1/categories
