@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.3.2)
     async-rack (0.5.1)
       rack (~> 1.1)
     bson (1.6.4)
@@ -11,13 +12,16 @@ GEM
       eventmachine (>= 0.12.10)
     em-synchrony (1.0.2)
       eventmachine (>= 1.0.0.beta.1)
+    em-websocket (0.3.8)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
     eventmachine (1.0.0.rc.4)
-    goliath (0.9.4)
+    goliath (1.0.0)
       async-rack
       em-synchrony (>= 1.0.0)
-      eventmachine (>= 1.0.0.beta.3)
-      http_parser.rb
-      http_router (~> 0.9.0)
+      em-websocket
+      eventmachine (>= 1.0.0.beta.4)
+      http_parser.rb (= 0.5.3)
       log4r
       multi_json
       rack (>= 1.2.2)
@@ -31,9 +35,6 @@ GEM
       rack-mount
     hashie (1.2.0)
     http_parser.rb (0.5.3)
-    http_router (0.9.7)
-      rack (>= 1.0.0)
-      url_mount (~> 0.2.1)
     log4r (1.1.10)
     mongo (1.6.4)
       bson (~> 1.6.4)
@@ -47,8 +48,6 @@ GEM
       rack (>= 1.0.0)
     rack-respond_to (0.9.8)
       rack-accept-media-types (>= 0.6)
-    url_mount (0.2.1)
-      rack
 
 PLATFORMS
   ruby
