@@ -1,8 +1,9 @@
-GGM ( Goliath - Grape - MongoDB, on Heroku )
+GGM ( [Goliath](https://github.com/postrank-labs/goliath) + [Grape](https://github.com/intridea/grape) + [MongoDB](http://www.mongodb.org/), on [Heroku](http://ggm.herokuapp.com/v1/categories) )
 ===
 
 This is a GitWatcher lab, experimenting with Goliath asyncronous ruby web server framework, Grape APIs, [gitwatcher.com](http://gitwatcher.com) data on MongoLAB/MongoDB and Heroku PAAS.
 Here they are, the Heroku working examples used during the tests: 
+
 -    [http://ggm.herokuapp.com/v1/categories](http://ggm.herokuapp.com/v1/categories)	 
 -    [http://gitwatcher.com/categories.json](http://gitwatcher.com/categories.json)
 
@@ -11,8 +12,8 @@ ApacheBench (ab):
 
 >[ab](http://en.wikipedia.org/wiki/ApacheBench) is a single-threaded command line computer program for measuring the performance of HTTP web servers. Originally designed to test the Apache HTTP Server, it is actually generic enough to test any web server.
 
-What is following is a comparison between [Rails 3](https://github.com/rails/rails) and [Goliath 1](https://github.com/postrank-labs/goliath) JSON API consuming
----
+Following the comparison between [Rails 3](https://github.com/rails/rails) and [Goliath 1](https://github.com/postrank-labs/goliath) JSON API.
+
 The following ApacheBench, has been run on Heroku Cedar single Web Dynos, on Ruby 1.9.3p194, MongoLAB/MongoDB. Goliath 1 responds to 100 cuncurrent calls in 1.826 seconds, with a medium of 54.76 requests per second:
 
 <pre>
@@ -115,6 +116,77 @@ Percentage of the requests served within a certain time (ms)
 lsoave@ubuntu:~$ 
 </pre>
 
+Here it is banchmark of Goliath, on a local Ubuntu 12.04 LTS machine, whith ruby 1.9.3p194 (2012-04-20 revision 35410) [i686-linux] :  
+
+<pre>
+lsoave@ubuntu:~/rails/tests/GGM$ ab -n 1000 -c 1000 http://localhost:5000/v1/categories
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
 
 
+Server Software:        Goliath
+Server Hostname:        localhost
+Server Port:            5000
+
+Document Path:          /v1/categories
+Document Length:        5113 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   9.160 seconds
+Complete requests:      1000
+Failed requests:        0
+Write errors:           0
+Total transferred:      5240000 bytes
+HTML transferred:       5113000 bytes
+Requests per second:    109.17 [#/sec] (mean)
+Time per request:       9159.632 [ms] (mean)
+Time per request:       9.160 [ms] (mean, across all concurrent requests)
+Transfer rate:          558.67 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       14   21   4.3     21      31
+Processing:  4342 7274 1436.6   7662    9115
+Waiting:     4341 7273 1436.7   7661    9115
+Total:       4372 7295 1432.4   7682    9129
+
+Percentage of the requests served within a certain time (ms)
+  50%   7682
+  66%   8363
+  75%   8538
+  80%   8738
+  90%   8973
+  95%   9084
+  98%   9129
+  99%   9129
+ 100%   9129 (longest request)
+lsoave@ubuntu:~/rails/tests/GGM$
+</pre>
+
+the banchmark of Rails on the same machine get back an apr_poll timeout (70007). That happen serverving Rails both with thin or webrik:
+
+<pre>
+lsoave@ubuntu:~/rails/github/gitwatcher$ ab -k -n 1000 -c 1000 http://localhost:3001/categories.json
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+apr_poll: The timeout specified has expired (70007)
+lsoave@ubuntu:~/rails/github/gitwatcher$
+</pre>
 
