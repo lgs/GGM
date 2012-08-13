@@ -16,6 +16,8 @@ GEM
       addressable (>= 2.1.1)
       eventmachine (>= 0.12.9)
     eventmachine (1.0.0.rc.4)
+    foreman (0.53.0)
+      thor (>= 0.13.6)
     goliath (1.0.0)
       async-rack
       em-synchrony (>= 1.0.0)
@@ -48,14 +50,16 @@ GEM
       rack (>= 1.0.0)
     rack-respond_to (0.9.8)
       rack-accept-media-types (>= 0.6)
+    thor (0.15.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bson_ext
-  bundler (= 1.2.0.pre.1)
+  bundler (= 1.2.0.rc.2)
   em-mongo
+  foreman
   goliath
   grape
   mongo
