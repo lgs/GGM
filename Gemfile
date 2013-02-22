@@ -3,7 +3,7 @@ source :rubygems
 gem 'bundler'
 #ruby '1.9.3'
 
-#gem 'mongo'
+gem 'mongo'
 gem 'em-mongo'
 gem 'bson_ext'
 gem 'goliath'
