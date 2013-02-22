@@ -3,6 +3,7 @@ require 'em-synchrony'
 require 'em-synchrony/em-mongo'
 require 'grape'
 require 'yajl'
+require 'yajl/json_gem'
 
 class API < Grape::API
   

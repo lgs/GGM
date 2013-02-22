@@ -49,8 +49,6 @@ GEM
     http_parser.rb (0.5.3)
     i18n (0.6.1)
     log4r (1.1.10)
-    mongo (1.8.2)
-      bson (~> 1.8.2)
     multi_json (1.6.1)
     multi_xml (0.5.3)
     rack (1.5.2)
@@ -90,7 +88,6 @@ DEPENDENCIES
   foreman
   goliath
   grape
-  mongo
   rack-test
   rake
   rspec
