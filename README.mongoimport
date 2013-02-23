@@ -1,7 +1,7 @@
 Start mongodb and populate before testing with rspec:
 
-	mongoimport --db api_test --host 127.0.0.1 --collection categories --file categories.json
-	mongoimport --db api_dev  --host 127.0.0.1 --collection categories --file categories.json
+	mongoimport --db db_test --host 127.0.0.1 --collection categories --file categories.json
+	mongoimport --db db_dev  --host 127.0.0.1 --collection categories --file categories.json
 
 
 
