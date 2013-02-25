@@ -8,6 +8,7 @@ gem 'em-mongo'
 gem 'bson_ext'
 gem 'goliath'
 gem 'grape'
+gem 'em-http-request'
 
 gem 'foreman', :groups => [:development, :test]
 

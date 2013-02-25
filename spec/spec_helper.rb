@@ -1,4 +1,10 @@
-require 'rubygems'
-require "rack/test"
-require './app'
+require 'em-synchrony/em-http'
+require 'goliath/test_helper'
 
+Goliath.env = :test
+
+RSpec.configure do |c|
+  c.include Goliath::TestHelper, :example_group => {
+    :file_path => /spec\//
+  }
+end
