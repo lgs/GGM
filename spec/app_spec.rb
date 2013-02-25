@@ -13,7 +13,11 @@ describe App do
       get_request(:path => '/v1/categories') do |c|
         #c.response.should == "Ruby Web Frameworks"
         resp = JSON.parse(c.response)
-        resp.map{|r|r.should include("name"=>"Ruby Web Frameworks")}
+        #resp.map{|r|r.should include("name"=>"Ruby Web Frameworks")}
+        #resp.map{|r|r.should =~ /"name"=>"Ruby Web Frameworks"/}
+        #resp.map{|r|r['name'].should =~ /Ruby Web Frameworks/}
+        categories = resp.map{|r|r['name']}
+        categories.to_s.should =~ /Ruby Web Frameworks/
       end
     end
   end
