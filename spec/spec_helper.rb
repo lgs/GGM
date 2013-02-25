@@ -1,5 +1,6 @@
 require 'em-synchrony/em-http'
 require 'goliath/test_helper'
+require 'yajl/json_gem'
 
 Goliath.env = :test
 

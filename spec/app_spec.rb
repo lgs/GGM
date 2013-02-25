@@ -11,8 +11,9 @@ describe App do
   it 'renders ' do
     with_api(App, api_options) do
       get_request(:path => '/v1/categories') do |c|
-        #c.response["name"].should == "Ruby Web Frameworks"
-        c.response.should == "Ruby Web Frameworks"
+        #c.response.should == "Ruby Web Frameworks"
+        resp = JSON.parse(c.response)
+        resp.map{|r|r.should include("name"=>"Ruby Web Frameworks")}
       end
     end
   end
