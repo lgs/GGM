@@ -1,3 +1,7 @@
+
+UPDATED with brand new Rails-api ( a light Rails 4.0.0.beta1 "just API" micro-framework ) + Grape endpoint, see stats at the end of the page
+===
+
 GGM ( [Goliath](https://github.com/postrank-labs/goliath) + [Grape](https://github.com/intridea/grape) + [MongoDB](http://www.mongodb.org/), on [Heroku](http://ggm.herokuapp.com/v1/categories) )
 ===
 
@@ -189,4 +193,57 @@ Benchmarking localhost (be patient)
 apr_poll: The timeout specified has expired (70007)
 lsoave@ubuntu:~/rails/github/gitwatcher$
 </pre>
+
+UPDATE 2013 Mar 01:
+
+Following a brand new Rails-api ( a light Rails 4.0.0.beta1 "just API" micro-framework ) + Grape endpoint, see  [http://apirizer.herokuapp.com/v1/categories](http://apirizer.herokuapp.com/v1/categories) This slim 
+
+<pre>
+lsoave@ubuntu:~$ ab -n 100 -c 100 http://apirizer.herokuapp.com/v1/categories
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking apirizer.herokuapp.com (be patient).....done
+
+
+Server Software:        WEBrick/1.3.1
+Server Hostname:        apirizer.herokuapp.com
+Server Port:            80
+
+Document Path:          /v1/categories
+Document Length:        5123 bytes
+
+Concurrency Level:      100
+Time taken for tests:   3.928 seconds
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Total transferred:      546600 bytes
+HTML transferred:       512300 bytes
+Requests per second:    25.46 [#/sec] (mean)
+Time per request:       3927.549 [ms] (mean)
+Time per request:       39.275 [ms] (mean, across all concurrent requests)
+Transfer rate:          135.91 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       52  600 611.9    211    1604
+Processing:   325  935 452.8    852    2842
+Waiting:      320  893 422.5    825    1943
+Total:        494 1535 897.4   1096    3926
+
+Percentage of the requests served within a certain time (ms)
+  50%   1096
+  66%   2027
+  75%   2554
+  80%   2621
+  90%   2940
+  95%   3040
+  98%   3123
+  99%   3926
+ 100%   3926 (longest request)
+lsoave@ubuntu:~$  
+</pre>
+
 
