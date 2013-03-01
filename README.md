@@ -1,10 +1,3 @@
-
-UPDATED (see the end page)
----
-
-*  add new example Rails-api micro-framework + Grape endpoint 
-*  (based on Rails 4.0.0.beta1) 
-
 GGM ( [Goliath](https://github.com/postrank-labs/goliath) + [Grape](https://github.com/intridea/grape) + [MongoDB](http://www.mongodb.org/), on [Heroku](http://ggm.herokuapp.com/v1/categories) )
 ===
 
@@ -13,6 +6,11 @@ Here they are, the Heroku working examples used during the tests:
 
 -    [http://ggm.herokuapp.com/v1/categories](http://ggm.herokuapp.com/v1/categories)	 
 -    [http://gitwatcher.com/categories.json](http://gitwatcher.com/categories.json)
+
+UPDATED (see the end page):
+
+*  add new example Rails-api micro-framework + Grape endpoint 
+*  (based on Rails 4.0.0.beta1) 
 
 ApacheBench (ab): 
 ===
@@ -197,9 +195,10 @@ apr_poll: The timeout specified has expired (70007)
 lsoave@ubuntu:~/rails/github/gitwatcher$
 </pre>
 
-Rails-api micro-framework (Rails 4.0.0.beta1) + Grape endpoint ( see [the source code](https://github.com/lgs/grape-on-rails-api) )
+UPDATE
 ---
 
+Rails-api micro-framework (Rails 4.0.0.beta1) + Grape endpoint ( see [the source code](https://github.com/lgs/grape-on-rails-api) )
 This slim rails 4 API framework, is faster than full rails but twice slower than Goliath anyway 
 
 <pre>
