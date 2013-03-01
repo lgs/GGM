@@ -1,6 +1,5 @@
 
-UPDATED with brand new Rails-api ( a light Rails 4.0.0.beta1 "just API" micro-framework ) + Grape endpoint, see stats at the end of the page
-===
+<pre>UPDATED with brand new Rails-api ( a light Rails 4.0.0.beta1 "just API" micro-framework ) + Grape endpoint, see stats at the end of the page</pre>
 
 GGM ( [Goliath](https://github.com/postrank-labs/goliath) + [Grape](https://github.com/intridea/grape) + [MongoDB](http://www.mongodb.org/), on [Heroku](http://ggm.herokuapp.com/v1/categories) )
 ===
@@ -196,7 +195,7 @@ lsoave@ubuntu:~/rails/github/gitwatcher$
 
 UPDATE 2013 Mar 01:
 
-Following a brand new Rails-api ( a light Rails 4.0.0.beta1 "just API" micro-framework ) + Grape endpoint, see  [http://apirizer.herokuapp.com/v1/categories](http://apirizer.herokuapp.com/v1/categories) This slim 
+Following a brand new Rails-api ( a light Rails 4.0.0.beta1 "just API" micro-framework ) + Grape endpoint, see  [http://apirizer.herokuapp.com/v1/categories](http://apirizer.herokuapp.com/v1/categories) This slim rails 4 framework for APIs, is faster than full rails but twice slower than Goliath anyway :
 
 <pre>
 lsoave@ubuntu:~$ ab -n 100 -c 100 http://apirizer.herokuapp.com/v1/categories
