@@ -5,7 +5,7 @@ This is a GitWatcher lab, experimenting with Goliath asyncronous ruby web server
 Here they are, the Heroku working examples used during the tests: 
 
 -    [http://ggm.herokuapp.com/v1/categories](http://ggm.herokuapp.com/v1/categories)	 
--    [http://gitwatcher.com/categories.json](http://gitwatcher.com/categories.json)
+-    [http://gitwatcher.com/categories.json]() This is currently off-line, because Gitwatcher is going to be rebuilt from scratch !
 
 UPDATED (see the end page):
 
