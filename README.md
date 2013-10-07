@@ -1,5 +1,6 @@
 GGM ( [Goliath](https://github.com/postrank-labs/goliath) + [Grape](https://github.com/intridea/grape) + [MongoDB](http://www.mongodb.org/), on [Heroku](http://ggm.herokuapp.com/v1/categories) )
 ===
+[![Code Climate](https://codeclimate.com/github/lgs/GGM.png)](https://codeclimate.com/github/lgs/GGM)
 
 This is a GitWatcher lab, experimenting with Goliath asyncronous ruby web server framework, Grape APIs, [gitwatcher.com](http://gitwatcher.com) data on MongoLAB/MongoDB and Heroku PAAS.
 Here they are, the Heroku working examples used during the tests: 
