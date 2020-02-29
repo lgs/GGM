@@ -75,7 +75,7 @@ GEM
       rack-accept-media-types (>= 0.6)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.0.3)
+    rake (12.3.3)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
